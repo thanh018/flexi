@@ -1,0 +1,369 @@
+
+
+
+
+@import "library.less";
+
+/*======================================
+=            0. RESET CSS              =
+=======================================*/
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:    border-box;
+        box-sizing:         border-box;
+    }
+
+
+    html * {
+      margin: 0;
+      outline: 0;
+      padding: 0;
+    }
+
+    html {
+        font-size: 14px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    html,
+    body {
+        padding: 0;
+        height: 100%;
+        margin: 0 auto;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        color: #777;
+        height: auto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        word-wrap: break-word;
+        background-color: #fff;
+        font-family: @font-family-1;
+    }
+
+    header,
+    nav,
+    body,
+    section,
+    article,
+    aside,
+    footer,
+    address,
+    hgroup {
+        display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    table,
+    tr,
+    td,
+    form {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    li {
+        list-style-position: outside;
+        list-style-type: none;
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    strong,
+    b {
+        font-weight: bold;
+    }
+
+    a {
+        color: #333;
+        position: relative;
+        text-decoration: none;
+        .transition(all 0.3s linear);
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        outline: 0;
+        color: @main-color;
+        text-decoration: none;
+    }
+
+    .padding-top-100 {
+    	padding-top: 100px;
+    }
+
+    .padding-bottom-100 {
+    	padding-bottom: 100px;
+    }
+
+    .margin-top-50 {
+    	margin-top: 50px;
+    }
+
+/*=========  End of reset css  ========*/
+
+
+
+/*======================================
+=            1. HEADER                 =
+======================================*/
+
+	#mainNav {
+		top: 0;
+		padding: 0;
+		width: 100%;
+		z-index: 999;
+		border: none;
+		margin-bottom: 0;
+		background-color: #fff;
+		box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+		.transition(all 0.3s ease);
+		.navbar-header {
+			display: table;
+			.navbar-brand {
+				display: table-cell;
+				vertical-align: middle;
+				float: none;
+				padding: 0;
+				height: 100px;
+				.transition(all 0.3s ease);
+				img {
+					.transition(all 0.3s ease);
+				}
+			}
+		}
+    	.navbar-nav {
+      		.page-scroll {
+		        margin: 0 25px;
+		        padding: 0;
+		        line-height: 100px;
+		        font-size: 14px;
+		        font-weight: 600;
+		        background-color:transparent;
+		        color: @title-color;
+        		.transition(all 0.3s ease);
+        		&:hover {
+          			color: @main-color;
+        		}
+      		}
+      		.active {
+        		.page-scroll {
+          			color: @main-color;
+          			background-color: transparent;
+        		}
+      		}
+    	}
+    	&.affix {
+    		.navbar-header {
+				.navbar-brand {
+					height: 60px;
+					img {
+						height: 70%;
+					}
+				}
+    		}
+    		.navbar-nav {
+      			.page-scroll {
+      				line-height: 60px;
+      			}
+      		}
+    	}
+    	&.slz-hidden-menu {
+    		top: -80px;
+    	}
+	}
+
+	.navbar-brand > img.logo-mobile {
+		display: none;
+	}
+
+	.navbar-default .navbar-toggle {
+		margin: 10px 0;
+		padding: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 0;
+		font-size: 26px;
+		color: @title-color;
+		background-color: transparent;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+
+/*=====  End of 1. HEADER  ===========*/
+
+
+/*=====================================
+=            2. FOOTER                =
+=====================================*/
+
+	.footer-wrapper {
+		margin-top: -50px;
+		width: 100%;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 100px;
+		.rectangle1 {
+			width: 60%;
+		    height: 500px;
+		    z-index: 1;
+		    background-color: #fff;
+		    border: 20px solid @main-color;
+		}
+		.rectangle2 {
+		    width: 52%;
+		    height: 500px;
+		    background-color: #fff;
+		    background-image: url(../images/background/footer-clound.jpg);
+		    background-position: 0;
+		    box-shadow: -4.5px 16px 50px 0px rgba( 36, 73, 255,0.5 );
+		    position: absolute;
+		    top: 7%;
+		    right: 4%;
+		    z-index: 2;
+		    -webkit-animation: cloud 15s linear infinite alternate;
+		    animation: cloud 15s linear infinite alternate;
+		}
+		.title {
+			font-size: 50px;
+		    font-family: 'Playfair Display',serif;
+		    position: absolute;
+		    padding-top: 50px;
+		    top: 23%;
+		    left: 33%;
+		    font-weight: bold;
+		    z-index: 2;
+		    color: #333;
+		}
+		.author {
+			margin-top: 100px;
+		    font-size: 14px;
+		    font-weight: bold;
+		    margin-bottom: 0;
+		    span {
+		    	color: @main-color;
+		    }
+		}
+		.mockup-iphone {
+		    position: absolute;
+		    width: 25%;
+		    left: 5%;
+		    top: 25%;
+		}
+		.slz-btn {
+		    z-index: 5;
+		    padding: 20px 40px;
+		    letter-spacing: 1px;
+		    position: absolute;
+		    top: 50%;
+		    font-size: 18px
+		}
+	}
+
+	@keyframes cloud {
+	  	from{
+	    	background-position: 0px;
+	  	}
+	  	to{
+	    	background-position: -200px;
+	  	}
+	}
+
+
+/*=====  End of 2. FOOTER   =========*/
+
+
+/*==================================
+=            3. Puchase            =
+==================================*/
+
+	.puchase-theme {
+		color: #fff;
+	    right: 30px;
+	    bottom: -90px;
+		position: fixed;
+	    z-index: 999;
+	    padding: 16px 28px;
+	    -moz-border-radius: 0px;
+	    -webkit-border-radius: 0px;
+	    border-radius: 0px;
+	    -moz-box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+	    -webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+	    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+	    background: @main-color;
+		.transition(all 1s ease);
+		> * {
+			float: left;
+			display: block;
+			margin-right: 5px;
+			font-weight: 500;
+			line-height: 18px;
+			font-size: 13px;
+			.transition(all 0.3s ease);
+		}
+		.icon {
+		    width: 20px;
+		    font-size: 16px;
+		    position: relative;
+		    top: -2px;
+		}
+		.highlighted {
+			color: #ff4783;
+		}
+		.decorated {
+			color: #1e2342;
+		}
+		.text-2 {
+			font-family: "Playfair Display";
+		    font-size: 14px;
+		    font-weight: 400;
+		    font-style: italic;
+		    text-transform: none;
+		    position: relative;
+		    top: -2px;
+		}
+		.price {
+			font-size: 22px;
+		}
+		path.leaf {
+		    fill: #82B541;
+		}
+		path.text {
+		    fill: #fff;
+		}
+		&:hover,
+		&:focus {
+			color: #fff;
+			.decorated {
+				color: #ff4783;
+			}
+		}
+		&.affix {
+			bottom: 60px;
+		}
+	}
+
+/*=====  End of 3. Puchase  ======*/

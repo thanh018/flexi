@@ -1,0 +1,35 @@
+@media screen and (max-width: 600px) {
+	.text-mb {
+		display: none;
+	}
+	
+	.slider-banner .title {
+		font-size: 40px;
+	}
+	
+	.banner-1 .banner-mockup {
+		left: 0;
+	}
+	.list-features {
+		&.column-4 {
+			> .item {
+				width: 50%;
+				&:nth-child(-n + 3) {
+					margin-top: 30px;
+				}
+				&:nth-child(-n + 2) {
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+
+	.shortcode-bg {
+		height: 500px;
+		background-size: cover;
+		background-image: url('../../assets/images/background/background-6.jpg');
+		img {
+			display: none;
+		}
+	}
+}

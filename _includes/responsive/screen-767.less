@@ -1,0 +1,91 @@
+@media screen and (max-width: 767px) {
+	#mainNav {
+		.navbar-header {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			.navbar-toggle {
+				float: left;
+			}
+			.navbar-brand {
+				float: right;
+				height: 60px;
+				padding: 10px 0;
+				img {
+					display: none;
+					&.logo-mobile {
+						display: block;
+						height: 100%;
+					}
+				}
+			}
+		}
+		.navbar-nav .page-scroll {
+			line-height: 50px;
+		}
+	}
+
+	#mainNav.affix .navbar-nav .page-scroll {
+		line-height: 50px;
+	}
+
+	.puchase-theme.affix {
+		bottom: 30px;
+	}
+
+	.banner-mockup {
+		top: auto;
+		left: 0;
+		right: auto;
+		display: block;
+		position: relative;
+		width: 100%;
+		max-width: 400px;
+		transform: none;
+		margin: 0 auto;
+		&.position-left {
+			right: auto;
+		}
+	}
+
+	.banner-1 .banner-mockup {
+		top: auto;
+		left: 50px;
+		height: 350px;
+		right: auto;
+		display: block;
+		transform: none;
+		overflow: visible;
+		margin-left: 0;
+	}
+
+	.banner-2, .banner-4, .banner-5 {
+		text-align: center;
+		.title-wrapper {
+			text-align: center;
+			&:before {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	.banner-5 { 
+		padding-top: 10px;
+	}
+
+	.content-filters {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.grid {
+		.grid-item {
+			padding: 10px;
+		}
+	}
+	
+	.tab-filter li {
+		margin: 0 15px 10px 15px;
+	}
+}
